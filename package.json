@@ -1,0 +1,35 @@
+{
+  "name": "backbone.appmodule",
+  "version": "0.0.0",
+  "author": {
+    "name": "Stéphane Bachelier",
+    "email": "<stephane.bachelier@gmail.com>"
+  },
+  "description": "Backbone app module",
+  "main": "dist/backbone.appmodule.js",
+  "keywords": [
+    "backbone",
+    "module",
+    "application",
+    "modular"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 0.10.0"
+  },
+  "devDependencies": {
+    "grunt": "~0.4.2",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-uglify": "^0.5.0",
+    "load-grunt-tasks": "^0.6.0",
+    "jshint-stylish": "^0.2.0",
+    "grunt-lintspaces": "^0.5.1",
+    "grunt-jscs-checker": "^0.6.0",
+    "grunt-preprocess": "^4.0.0"
+  },
+  "dependencies": {
+    "grunt": "^0.4.5"
+  }
+}

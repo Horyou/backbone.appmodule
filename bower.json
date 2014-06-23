@@ -1,0 +1,28 @@
+{
+  "name": "backbone.appmodule",
+  "version": "0.0.0",
+  "author": {
+    "name": "Stéphane Bachelier",
+    "email": "<stephane.bachelier@gmail.com>"
+  },
+  "description": "Backbone app module",
+  "main": "dist/backbone.appmodule.js",
+  "moduleType": [
+    "amd",
+    "globals"
+  ],
+  "keywords": [
+    "backbone",
+    "module",
+    "application",
+    "modular"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
