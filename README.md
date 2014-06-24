@@ -2,7 +2,10 @@
 
 ## Why
 
-It's strongly advised to create modular applications, thus splitting one big application in small independants applications. See [Nicholas Zakas post](REFERENCE HERE).
+It's strongly advised to create modular applications, thus splitting one big application in small independants applications. See Nicholas Zakas slides](http://www.slideshare.net/nzakas/scalable-javascript-application-architecture).
+
+Another good post by Jim Zimmerman: http://www.joezimjs.com/javascript/scalable-javascript-applications/.
+
 
 This `Backbone.AppModule` is a small API to `start` and `stop` (an application|a) module. The main purpose of an application is to respond to routes and to display as a result a view. Thus this module add an `initialize` function where you can start the application router.
 
