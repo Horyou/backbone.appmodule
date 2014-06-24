@@ -18,7 +18,10 @@ module.exports = function (grunt) {
   require('load-grunt-config')(grunt, {
     init: true,
     configPath: path.join(process.cwd(), 'tasks'),
-    config: config
+    config: config,
+    jitGrunt: {
+      jscs: 'grunt-jscs-checker'
+    }
   });
 
   // Default task.
