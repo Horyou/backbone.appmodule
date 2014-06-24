@@ -5,11 +5,11 @@ module.exports = function (grunt) {
   var config = {
     // Metadata.
     pkg: grunt.file.readJSON('package.json'),
-    banner: '/*! <%= pkg.name %> - v<%= pkg.version %> - ' +
-      '<%= grunt.template.today("yyyy-mm-dd") %>\n' +
-      '<%= pkg.homepage ? "* " + pkg.homepage + "\\n" : "" %>' +
-      '* Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>;' +
-      ' Licensed <%= _.pluck(pkg.licenses, "type").join(", ") %> */\n',
+    banner: '/*! <%= pkg.name %> - v<%= pkg.version %>\n' +
+      ' *  Release on: <%= grunt.template.today("yyyy-mm-dd") %>\n' +
+      '<%= pkg.homepage ? " *  " + pkg.homepage + "\\n" : "" %>' +
+      ' *  Copyright (c) <%= grunt.template.today("yyyy") %> <%= pkg.author.name %>\n' +
+      ' *  Licensed <%= pkg.license %> */\n',
   };
 
   //require('load-grunt-tasks')(grunt);
