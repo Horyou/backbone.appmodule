@@ -37,6 +37,15 @@ module.exports = function (grunt) {
         dest: 'dist/<%= pkg.name %>.min.js'
       }
     },
+    jscs: {
+      options: {
+        preset: 'google',
+        config: '.jscs.json'
+      },
+      lib: ['lib/<%= pkg.name %>.js'],
+      test: ['test/spec/{,*/}*.js'],
+      grunt: ['Gruntfile.js'],
+    },
     jshint: {
       options: {
         jshintrc: '.jshintrc',
@@ -46,7 +55,7 @@ module.exports = function (grunt) {
         src: 'Gruntfile.js'
       },
       lib: {
-        src: ['lib/**/*.js']
+        src: ['lib/<%= pkg.name %>.js']
       },
       test: {
         src: ['test/**/*.js']
@@ -71,6 +80,6 @@ module.exports = function (grunt) {
   require('load-grunt-tasks')(grunt);
 
   // Default task.
-  grunt.registerTask('build', ['preprocess', 'concat', 'uglify']);
+  grunt.registerTask('build', ['jshint', 'jscs', 'preprocess', 'concat', 'uglify']);
 
 };
