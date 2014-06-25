@@ -1,40 +1,57 @@
-/*! backbone.appmodule - v0.2.0
+/*! backbone.appmodule - v0.2.1
  *  Release on: 2014-06-25
  *  Copyright (c) 2014 Stéphane Bachelier
  *  Licensed MIT */
-'use strict';
-
-var AppModule = function (options) {
-  this.options = options;
-  this.initialize(options);
-};
-
-AppModule.prototype = {
-  // Initialize is an empty function by default. Override it with your own
-  // initialization logic which can be used to register
-  // application routes
-  initialize: function () {},
-
-  // start module
-  start: function () {
-    if (this.app) {
-      // return current app if it has already been started
-      return this.app;
+(function(root, factory) {
+    if(typeof exports === 'object') {
+        module.exports = factory(require('backbone'));
     }
+    else if(typeof define === 'function' && define.amd) {
+        define(['backbone'], factory);
+    }
+    else {
+        root['AppModule'] = factory(root.backbone);
+    }
+}(this, function(backbone) {
 
-    this.app = this._startApp();
+  'use strict';
 
-    return this.app;
-  },
+  var AppModule = function (options) {
+    this.options = options;
+    this.initialize(options);
+  };
 
-  // stop is an empty function by default.
-  // to handle all the logic to close the module
-  stop: function () {},
+  AppModule.prototype = {
+    // Initialize is an empty function by default. Override it with your own
+    // initialization logic which can be used to register
+    // application routes
+    initialize: function () {},
 
-  // _startApp is an empty function by default.
-  // a private method to start the application
-  _startApp: function () {}
-};
+    // start module
+    start: function () {
+      if (this.app) {
+        // return current app if it has already been started
+        return this.app;
+      }
 
-// copy Backbone extend to ease module setup
-AppModule.extend = Backbone.Model.extend;
+      this.app = this._startApp();
+
+      return this.app;
+    },
+
+    // stop is an empty function by default.
+    // to handle all the logic to close the module
+    stop: function () {},
+
+    // _startApp is an empty function by default.
+    // a private method to start the application
+    _startApp: function () {}
+  };
+
+  // copy Backbone extend to ease module setup
+  AppModule.extend = Backbone.Model.extend;
+
+
+  return AppModule;
+
+}));
