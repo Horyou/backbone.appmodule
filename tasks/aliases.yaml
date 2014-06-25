@@ -1,6 +1,8 @@
+default:
+  - build
+  
 build:
   - jshint
   - jscs
-  - preprocess
   - concat
   - uglify

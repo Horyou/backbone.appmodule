@@ -12,7 +12,6 @@ module.exports = function (grunt) {
       ' *  Licensed <%= pkg.license %> */\n',
   };
 
-  //require('load-grunt-tasks')(grunt);
   var path = require('path');
 
   require('load-grunt-config')(grunt, {
@@ -23,8 +22,4 @@ module.exports = function (grunt) {
       jscs: 'grunt-jscs-checker'
     }
   });
-
-  // Default task.
-  grunt.registerTask('build', ['jshint', 'jscs', 'preprocess', 'concat', 'uglify']);
-
 };

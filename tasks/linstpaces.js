@@ -1,15 +1,14 @@
 module.exports = {
   options: {
-    jshintrc: '.jshintrc',
-    reporter: require('jshint-stylish')
+    editorconfig: '.editorconfig'
   },
   gruntfile: {
     src: ['Gruntfile.js', 'tasks/{,*/}*.js']
   },
   lib: {
-    src: ['lib/<%= pkg.name %>.js']
+    src: ['/scripts/**/*.js']
   },
   test: {
-    src: ['test/**/*.js']
+    src: ['test/spec/**/*.js']
   }
 };
