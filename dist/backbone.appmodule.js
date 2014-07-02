@@ -1,5 +1,5 @@
-/*! backbone.appmodule - v0.2.1
- *  Release on: 2014-06-25
+/*! backbone.appmodule - v0.2.2
+ *  Release on: 2014-07-02
  *  Copyright (c) 2014 Stéphane Bachelier
  *  Licensed MIT */
 (function(root, factory) {
@@ -28,7 +28,7 @@
     initialize: function () {},
 
     // start module
-    start: function () {
+    start: function (callback) {
       if (this.app) {
         // return current app if it has already been started
         return this.app;
@@ -36,6 +36,9 @@
 
       this.app = this._startApp();
 
+      if (callback) {
+        callback();
+      }
       return this.app;
     },
 
