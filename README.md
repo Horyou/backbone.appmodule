@@ -27,9 +27,11 @@ This is where to add all module logic that should be defined at module startup, 
 
 For a better example see blog post about usage of Backbone.EnhancedRouter.
 
-### `start: function ()`
+### `start: function (callback)`
 
 This is the function which is responsible for starting the module. It basically check if application has not already been started, and if no, create the application by calling `_startApp`, else it return the existing application.
+
+It accepts a function callback that will be called when the application has been started, but no guarantee if the application has some kind of async behaviour.
 
 ### `stop: function ()`
 
