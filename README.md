@@ -60,3 +60,9 @@ AppModule.extend({
   }
 });
 ```
+
+## TODO
+
+ * add some test
+ * full example
+ * more documentation
