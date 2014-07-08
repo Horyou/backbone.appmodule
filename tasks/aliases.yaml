@@ -2,6 +2,7 @@ default:
   - build
 
 build:
+  - clean:dist
   - jshint
   - jscs
   - umd
