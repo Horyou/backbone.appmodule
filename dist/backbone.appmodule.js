@@ -1,5 +1,5 @@
-/*! backbone.appmodule - v0.2.2
- *  Release on: 2014-07-02
+/*! backbone.appmodule - v0.2.3
+ *  Release on: 2014-08-12
  *  Copyright (c) 2014 Stéphane Bachelier
  *  Licensed MIT */
 (function(root, factory) {
@@ -36,7 +36,7 @@
 
       this.app = this._startApp();
 
-      if (callback) {
+      if (callback && 'function' === typeof(callback)) {
         callback();
       }
       return this.app;
