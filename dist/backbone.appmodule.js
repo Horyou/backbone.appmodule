@@ -1,5 +1,5 @@
-/*! backbone.appmodule - v0.2.3
- *  Release on: 2014-08-12
+/*! backbone.appmodule - v0.2.4
+ *  Release on: 2014-10-17
  *  Copyright (c) 2014 Stéphane Bachelier
  *  Licensed MIT */
 (function(root, factory) {
@@ -25,7 +25,11 @@
     // Initialize is an empty function by default. Override it with your own
     // initialization logic which can be used to register
     // application routes
-    initialize: function () {},
+    initialize: function (options) {
+      if (options && options.autoStart || this.autoStart) {
+        this.start();
+      }
+    },
 
     // start module
     start: function (callback) {
