@@ -13,6 +13,13 @@ This `Backbone.AppModule` is a small API to `start` and `stop` (an application|a
 
 The only dependency is Backbone, and only exists because of statically adding the `Backbone.extend` function to `AppModule`. And mainly because this module has been created for applications created in `Backbone`.
 
+## Options
+
+### `autoStart`, boolean
+
+If this field is set as a property or passed as an options then the module will be started immediately. Else the module will be lazy started, which means you would need to called manually the `start` method or bind an event listener of whatever to start the module.
+
+
 ## API
 
 ### `_startApp: function ()`
@@ -24,6 +31,8 @@ This is the logic to start the application module. This function should not need
 ### `initialize: function (options)`
 
 This is where to add all module logic that should be defined at module startup, e.g. router may be defined here to enable a lazy startup of app module, which means that application module may be started only when the a router callback is called.
+
+If there is an option `autoStart` set to `true`, then the module will immediately call the `start` method.
 
 For a better example see blog post about usage of Backbone.EnhancedRouter.
 
